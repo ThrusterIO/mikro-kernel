@@ -9,13 +9,14 @@ use Serializable;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Thruster\HttpFactory\HttpFactoryInterface;
+use Thruster\HttpFactory\HttpFactoryProviderInterface;
 
 /**
  * Class MikroKernelInterface.
  *
  * @author  Aurimas Niekis <aurimas@niekis.lt>
  */
-interface MikroKernelInterface extends RequestHandlerInterface, Serializable
+interface MikroKernelInterface extends RequestHandlerInterface, HttpFactoryProviderInterface, Serializable
 {
     /**
      * Loads the container configuration.

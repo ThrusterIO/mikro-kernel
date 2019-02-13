@@ -23,7 +23,7 @@
         "symfony/dependency-injection": "^4.2",
         "symfony/expression-language": "^4.2",
         "symfony/proxy-manager-bridge": "^4.2",
-        "thruster/http-factory": "^1.0",
+        "thruster/http-factory": "^1.1",
         "zendframework/zend-diactoros": "^2.1"
     },
     "require-dev": {
