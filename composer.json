@@ -1,0 +1,62 @@
+{
+    "name": "thruster/mikro-kernel",
+    "type": "library",
+    "description": "Thruster MikroKernel Component",
+    "keywords": [
+        "mikro-kernel",
+        "thruster"
+    ],
+    "homepage": "https://thruster.io",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aurimas Niekis",
+            "email": "aurimas@niekis.lt"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "ext-curl": "*",
+        "psr/http-server-handler": "^1.0",
+        "symfony/config": "^4.2",
+        "symfony/debug": "^4.2",
+        "symfony/dependency-injection": "^4.2",
+        "symfony/expression-language": "^4.2",
+        "symfony/proxy-manager-bridge": "^4.2",
+        "thruster/http-factory": "^1.0",
+        "zendframework/zend-diactoros": "^2.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8",
+        "friendsofphp/php-cs-fixer": "^2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Thruster\\MikroKernel\\": "src"
+        },
+        "classmap": [
+            "src/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Thruster\\MikroKernel\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test-coverage": "phpunit --coverage-html build/html/",
+        "check-style": "php-cs-fixer fix --dry-run --diff --diff-format udiff",
+        "fix-style": "php-cs-fixer fix",
+        "phpcs-ci": "phpcs --standard=psr2 src/",
+        "test-ci": "phpunit --coverage-text --coverage-clover=coverage.clover"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
